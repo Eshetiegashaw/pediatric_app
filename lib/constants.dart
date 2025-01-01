@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 
 
 var my_app_bar = AppBar(
-    backgroundColor: Color.fromRGBO(0, 183, 227, 1.0),
-  title: Text('Pediatrics Health'),
+    backgroundColor: const Color.fromRGBO(0, 183, 227, 1.0),
+  title: const Text('Pediatrics Health'),
   actions: [my_action],
 );
 
@@ -13,9 +13,9 @@ var my_app_bar = AppBar(
 // rgb(3 100 119)
 // rgb(8 104 145)
 // rgb(21 19 58)
-
 var my_drawer = Drawer(
     backgroundColor: Colors.white,
+    elevation: 2.0,
     child: Column(
       children: [
       Container(
@@ -31,7 +31,7 @@ var my_drawer = Drawer(
       ),
       ListTile(
       leading: Icon(Icons.dashboard),
-      title: Text("Dashboard"),
+      title: Text("Tutorial"),
       ),
       Divider(),
       ListTile(
@@ -58,7 +58,6 @@ var my_drawer = Drawer(
       ),
       ],
     ),
-    elevation: 2.0,
 );
 
 
@@ -73,7 +72,7 @@ var my_action = PopupMenuButton<String>(
               onPressed: () {
                 Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
               },
-              icon: Icon(Icons.light_mode),
+              icon: const Icon(Icons.light_mode),
           ),
         ),
         const PopupMenuItem<String>(
